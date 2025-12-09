@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import Pyramid from './components/Pyramid'
 import QualityIndicators from './components/QualityIndicators'
+import Documents from './components/Documents'
 
 function Navigation() {
   const location = useLocation()
@@ -37,6 +38,16 @@ function Navigation() {
             >
               Показатели качества
             </Link>
+            <Link
+              to="/documents"
+              className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                isActive('/documents')
+                  ? 'bg-primary-600 text-white'
+                  : 'text-gray-700 hover:bg-primary-50 hover:text-primary-700'
+              }`}
+            >
+              Документы
+            </Link>
           </div>
         </div>
       </div>
@@ -52,6 +63,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Pyramid />} />
           <Route path="/quality" element={<QualityIndicators />} />
+          <Route path="/documents" element={<Documents />} />
         </Routes>
       </div>
     </Router>
