@@ -13,17 +13,16 @@ export default function QualityIndicators() {
     setSelectedIndicator(null)
   }
 
-  // Расположение блоков в виде ровного дерева для 8 элементов
-  // Структура: 1 корень -> 2 ветви -> по 4 листа на каждой ветви
+  // Расположение блоков в виде ровного дерева для 7 элементов
+  // Структура: 1 корень -> 2 ветви -> по 3 листа на каждой ветви + 1 центральный
   const positions = [
-    { top: '8%', left: '50%', transform: 'translateX(-50%)' }, // 1. Электрические параметры (корень)
-    { top: '25%', left: '25%', transform: 'translateX(-50%)' }, // 2. Надёжность (левая ветвь)
-    { top: '25%', left: '75%', transform: 'translateX(-50%)' }, // 3. Температурные характеристики (правая ветвь)
-    { top: '50%', left: '10%', transform: 'translateX(-50%)' }, // 4. Электромагнитная совместимость (левый лист 1)
-    { top: '50%', left: '30%', transform: 'translateX(-50%)' }, // 5. Безопасность и оценка соответствия (левый лист 2)
-    { top: '50%', left: '70%', transform: 'translateX(-50%)' }, // 6. Экологическая безопасность (правый лист 1)
-    { top: '50%', left: '90%', transform: 'translateX(-50%)' }, // 7. Эргономика (правый лист 2)
-    { top: '50%', left: '50%', transform: 'translateX(-50%)' }, // 8. Эстетичность (центральный лист)
+    { top: '10%', left: '50%', transform: 'translateX(-50%)' }, // 1. Электрические параметры (корень)
+    { top: '30%', left: '25%', transform: 'translateX(-50%)' }, // 2. Надёжность (левая ветвь)
+    { top: '30%', left: '75%', transform: 'translateX(-50%)' }, // 3. Температурные характеристики (правая ветвь)
+    { top: '55%', left: '12.5%', transform: 'translateX(-50%)' }, // 4. Электромагнитная совместимость (левый лист 1)
+    { top: '55%', left: '37.5%', transform: 'translateX(-50%)' }, // 5. Экологическая безопасность (левый лист 2)
+    { top: '55%', left: '62.5%', transform: 'translateX(-50%)' }, // 6. Эргономика (правый лист 1)
+    { top: '55%', left: '87.5%', transform: 'translateX(-50%)' }, // 7. Эстетичность (правый лист 2)
   ]
 
   return (
@@ -44,18 +43,18 @@ export default function QualityIndicators() {
             {/* Соединительные линии от корня к ветвям второго уровня */}
             <line
               x1="50%"
-              y1="8%"
+              y1="10%"
               x2="25%"
-              y2="25%"
+              y2="30%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
             />
             <line
               x1="50%"
-              y1="8%"
+              y1="10%"
               x2="75%"
-              y2="25%"
+              y2="30%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
@@ -63,18 +62,18 @@ export default function QualityIndicators() {
             {/* Соединительные линии от левой ветви к левым листьям */}
             <line
               x1="25%"
-              y1="25%"
-              x2="10%"
-              y2="50%"
+              y1="30%"
+              x2="12.5%"
+              y2="55%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
             />
             <line
               x1="25%"
-              y1="25%"
-              x2="30%"
-              y2="50%"
+              y1="30%"
+              x2="37.5%"
+              y2="55%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
@@ -82,37 +81,18 @@ export default function QualityIndicators() {
             {/* Соединительные линии от правой ветви к правым листьям */}
             <line
               x1="75%"
-              y1="25%"
-              x2="70%"
-              y2="50%"
+              y1="30%"
+              x2="62.5%"
+              y2="55%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
             />
             <line
               x1="75%"
-              y1="25%"
-              x2="90%"
-              y2="50%"
-              stroke="#0ea5e9"
-              strokeWidth="2"
-              strokeDasharray="5,5"
-            />
-            {/* Соединительные линии от обеих ветвей к центральному листу */}
-            <line
-              x1="25%"
-              y1="25%"
-              x2="50%"
-              y2="50%"
-              stroke="#0ea5e9"
-              strokeWidth="2"
-              strokeDasharray="5,5"
-            />
-            <line
-              x1="75%"
-              y1="25%"
-              x2="50%"
-              y2="50%"
+              y1="30%"
+              x2="87.5%"
+              y2="55%"
               stroke="#0ea5e9"
               strokeWidth="2"
               strokeDasharray="5,5"
